@@ -47,7 +47,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/testAuth", (req, res) => {
-  console.log(req.user);
+  if (req.isAuthenticated) {
+    console.log(req.user);
+  } else {
+    console.log("NOT AUTHENTICATED");
+  }
 });
 
 app.listen(3001, () => {
