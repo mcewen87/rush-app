@@ -1,0 +1,36 @@
+body {
+  background-color: #c000e2;
+  margin: 0px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  height: 300px;
+  width: 250px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 15px;
+}
+
+.entryBox {
+  margin: 10px 0px;
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.entryButton:hover {
+  cursor: pointer;
+}
+input {
+  display: block;
+  margin-top: 10px;
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+}
