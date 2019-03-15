@@ -4,8 +4,9 @@ var mongoose = require("mongoose");
 var SALT_FACTOR = 10;
 
 var userSchema = mongoose.Schema({
-  username: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true, lowercase: true },
   password: { type: String, required: true },
+  intuitions: [{ title: String, body: String }],
   createdAt: { type: Date, default: Date.now }
 });
 
