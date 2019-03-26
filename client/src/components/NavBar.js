@@ -17,19 +17,19 @@ class NavBar extends Component {
     return (
       <div className="navBar">
         <div className="leftNav">
-          <NavLink to="/">
+          <NavLink className="navLink" to="/">
             {" "}
             <h3>Home</h3>{" "}
           </NavLink>
-          <NavLink to="/dashboard">
+          <NavLink className="navLink" to="/dashboard">
             {" "}
             <h3> Dashboard </h3>{" "}
           </NavLink>
-          <NavLink to="/intuitions">
+          <NavLink className="navLink" to="/intuitions">
             {" "}
             <h3>Intuitions</h3>{" "}
           </NavLink>
-          <NavLink to="/test">
+          <NavLink className="navLink" to="/test">
             {" "}
             <h3> About </h3>{" "}
           </NavLink>

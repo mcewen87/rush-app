@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import welcome from "../img/welcome.jpg";
 import "../App.css";
-
 class EntryBox extends Component {
   constructor(props) {
     super();
@@ -68,37 +67,35 @@ class EntryBox extends Component {
 
   render() {
     return (
-      <div className="entryContainer">
-        <div className="entryBox">
-          <img src={welcome} className="welcome" />
-          <h1 className="welcomeHeader">Welcome to Rush</h1>
-          <p className="welcomeBody">
-            Rush is a thought board, a place to jot down your intuitions, keep
-            them, delete them, cultivate them, and should you desire, share them
-            with the world: 💡🔥🚀
-          </p>
+      <div className="entryBox">
+        <img src={welcome} className="welcome" />
+        <h1 className="welcomeHeader">Welcome to Rush</h1>
+        <p className="welcomeBody">
+          Rush is a thought board, a place to jot down your intuitions, keep
+          them, delete them, cultivate them, and should you desire, share them
+          with the world: 💡🔥🚀
+        </p>
 
-          <form>
-            <input
-              placeholder="Email"
-              type="text"
-              value={this.state.email}
-              onChange={this.handleEmail}
-            />
-            <input
-              placeholder="Password"
-              type="password"
-              value={this.state.password}
-              onChange={this.handlePassword}
-            />
-            <button onClick={this.signin} className="entryButton">
-              Sign In
-            </button>
-            <button onClick={this.signup} className="entryButton">
-              Sign Up
-            </button>
-          </form>
-        </div>
+        <form>
+          <input
+            placeholder="Email"
+            type="text"
+            value={this.state.email}
+            onChange={this.handleEmail}
+          />
+          <input
+            placeholder="Password"
+            type="password"
+            value={this.state.password}
+            onChange={this.handlePassword}
+          />
+          <button onClick={this.signin} className="entryButton">
+            Sign In
+          </button>
+          <button onClick={this.signup} className="entryButton">
+            Sign Up
+          </button>
+        </form>
       </div>
     );
   }

@@ -1,5 +1,55 @@
 body {
-  margin: 0px;
+  margin-bottom: 15px;
+}
+
+.spinnerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+}
+
+.spinner {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0vh -33px 0 -9px rgba(0, 192, 221, 0.16),
+    24px -24px 0 -9px rgba(0, 192, 221, 0.28),
+    33px 0vh 0 -9px rgba(0, 192, 221, 0.4),
+    24px 24px 0 -9px rgba(0, 192, 221, 0.52),
+    0vh 33px 0 -9px rgba(0, 192, 221, 0.64),
+    -24px 24px 0 -9px rgba(0, 192, 221, 0.76),
+    -33px 0vh 0 -9px rgba(0, 192, 221, 0.88),
+    -24px -24px 0 -9px rgba(0, 192, 221, 1);
+  animation: spin 1s linear 0s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  justify-content: center;
+  padding: 10px;
+}
+
+.content {
+  width: 1100px;
 }
 
 .navBar {
@@ -36,21 +86,16 @@ body {
 a {
   color: #000000;
   font-family: "Montserrat", sans-serif;
-  margin-left: 15px;
+  margin: 0;
   text-decoration: none;
 }
 
 a:hover {
   color: #c000e2;
 }
-.entryContainer {
-  align-items: center;
-  background: linear-gradient(to right bottom, #ffffff 50%, #c000e2 50%);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
+
+.navLink {
+  margin-left: 15px;
 }
 
 .mainContainer {
@@ -68,6 +113,7 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   width: 100%;
   height: 275px;
+  overflow: hidden;
 }
 .toggle:hover {
   box-shadow: 0 0px 1px rgba(0, 0, 0, 0.12), 0 0px 1px rgba(0, 0, 0, 0.24);
@@ -93,6 +139,10 @@ a:hover {
   margin: 10px 10px 0px 10px;
 }
 
+.cardBody {
+  white-space: pre-wrap;
+}
+
 .floatRight {
   float: right;
 }
@@ -104,7 +154,6 @@ a:hover {
 .formBody {
   display: flex;
   flex-direction: row;
-  align-content: center;
   padding: 10px;
   width: 100%;
 }
@@ -161,6 +210,7 @@ a:hover {
   height: auto;
   padding-bottom: 10px;
   width: 350px;
+  margin: auto;
 }
 
 .welcome {
@@ -215,4 +265,50 @@ p {
 .welcomeBody {
   align-self: center;
   margin: 10px;
+}
+
+/* EDIT BOX */
+
+.editBox {
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  margin: 15px auto;
+}
+
+.editForm {
+  align-self: auto;
+}
+
+.editTitle {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #00c0dd;
+  align-self: flex-start;
+  font-size: 2rem;
+  color: #00c0dd;
+  width: 100%;
+}
+
+.editBody {
+  height: 400px;
+  display: block;
+  width: 80%;
+  margin: 10px 5px;
+  font-size: 1rem;
+  color: #00c0dd;
+  padding: none;
+  border: none;
+  resize: none;
+}
+
+.editBody:focus {
+  outline: 0;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #00c0dd;
+  opacity: 1; /* Firefox */
 }

@@ -7,12 +7,14 @@ import EntryBox from "./components/EntryBox";
 import IntuitionsBoard from "./components/IntuitionsBoard";
 import withAuth from "./components/withAuth";
 import Test from "./components/Test";
+import EditPage from "./components/EditPage";
 
 ReactDOM.render(
   <BrowserRouter>
     <App>
       <Route path="/" exact component={EntryBox} />
       <Route path="/dashboard" component={withAuth(IntuitionsBoard)} />
+      <Route path="/editpage" component={EditPage} />
       <Route path="/test" component={Test} />
     </App>
   </BrowserRouter>,
